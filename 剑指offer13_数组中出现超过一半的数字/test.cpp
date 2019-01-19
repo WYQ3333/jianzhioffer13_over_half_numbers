@@ -26,6 +26,7 @@ public:
 					i = j;
 				}
 			}
+			count = 0;
 		}
 	}
 };
