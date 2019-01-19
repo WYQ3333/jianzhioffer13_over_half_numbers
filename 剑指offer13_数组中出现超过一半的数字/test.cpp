@@ -10,6 +10,9 @@ class Solution {
 public:
 	int MoreThanHalfNum_Solution(vector<int> numbers) {
 		//ÅÅĞò
+		if (numbers.size() == 1){
+			return numbers[0];
+		}
 		sort(numbers.begin(), numbers.end());
 		int i = 0;
 		int j = 0;
@@ -22,8 +25,8 @@ public:
 				}
 				++j;
 			}
-			
 		}
+		return 0;
 	}
 };
 
