@@ -15,6 +15,7 @@ public:
 		int j = 0;
 		int count = 0;
 		for (i = 0; i < numbers.size(); ++i){
+			j = i + 1;
 			if (j < numbers.size() && numbers[i] == numbers[j]){
 				++j;
 				++count;
@@ -24,9 +25,9 @@ public:
 				else{
 					++j;
 					i = j;
+					count = 0;
 				}
-			}
-			count = 0;
+			}	
 		}
 	}
 };
