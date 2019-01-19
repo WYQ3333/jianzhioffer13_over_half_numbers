@@ -16,18 +16,13 @@ public:
 		int count = 0;
 		for (i = 0; i < numbers.size(); ++i){
 			j = i + 1;
-			if (j < numbers.size() && numbers[i] == numbers[j]){
-				++j;
-				++count;
-				if (count >= numbers.size() / 2){
+			while(j < numbers.size() && numbers[i] == numbers[j]){
+				if (j < numbers.size() && (j - i) >= numbers.size() / 2){
 					return numbers[i];
 				}
-				else{
-					++j;
-					i = j;
-					count = 0;
-				}
-			}	
+				++j;
+			}
+			
 		}
 	}
 };
